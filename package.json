@@ -16,7 +16,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "mongoose": "^4.10.4"
+    "mongoose": "^4.10.4",
+    "nodemailer": "^2.6.4"
   },
   "engines": {
     "node": "6.10.2"

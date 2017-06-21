@@ -2,6 +2,9 @@ let express = require('express');
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 
+let nodemailer  = require( 'nodemailer' ); // https://github.com/nodemailer/nodemailer
+let auth        = require( './data/email-auth' );
+
 let jwt = require('./services/jwt');
 
 let User = require( './models/User' );
@@ -24,7 +27,7 @@ function authenticate(req, res, next) {
         });
     }
 
-    if ( req.path === '/login' || ( req.path === '/messages' && req.method.toUpperCase() === 'POST' ) ) return next();
+    if ( req.path === '/login' || ( req.path === '/messages' && req.method.toUpperCase() === 'POST' ) || ( req.path === '/reply' && req.method.toUpperCase() === 'POST' ) ) return next();
 
     if (!req.headers.authorization) {
         return res.status(401).send({
@@ -106,6 +109,34 @@ app.post('/messages', function (req, res) {
     message.save(function (err) {
         if (err) { return err; }
         res.status(200).json(message);
+    });
+});
+
+app.post('/reply', function (req, res) {
+    let body = req.body;
+
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: auth
+    });
+
+    console.log(body.text);    
+    // setup e-mail data with unicode symbols
+    let mailOptions = {
+        from: auth.user,
+        to: body.to,
+        subject: body.subject,
+        text: body.text
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+            res.send('Oops! Something went wrong sending the reply. Try again.');
+            return console.log(err);
+        }
+        console.log('Reply sent: ' + info.response);
+        res.send('Reply to the message was successfully sent to user');
     });
 });
 

@@ -18,3 +18,7 @@
 .message-received-time {
     color: #888;
 }
+
+.btn-trigger-dialog-reply {
+    float: right;
+}

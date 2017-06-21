@@ -35,6 +35,46 @@
             </table>
         </div>
 
+        <div class="modal fade" id="dialog-reply">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Compose reply</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="frm-reply">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="to">To</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" disabled type="text" name="to" id="to" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="subject">Subject</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" name="subject" id="subject" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="text">Reply</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" type="text" name="text" id="text" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <input class="btn btn-default" type="reset" value="Reset" id="btn-frm-reset" />
+                                    <input class="btn btn-primary" type="submit" value="Send reply" id="btn-frm-submit" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
         <script src="external/jquery-3.2.1.min.js"></script>
         <script src="external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
