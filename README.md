@@ -16,3 +16,7 @@ To be able to submit messages and view them you need a Mongo DB instance running
 4. To view the submitted messages, open [https://localhost:3000/login.html](https://localhost:3000/login.html). Login using the email and password of user document you added to the users table.
 5. You will be redirected to a messages.html page on successful login. It will have all messages received from the contact form.
 
+## Accessing the app online
+The app is hosted on Heroku. The following links help access it.
+1. The portfolio page can be accessed at [https://personal-portfolio-page.herokuapp.com/portfolio.html](https://personal-portfolio-page.herokuapp.com/portfolio.html)
+2. The messages submitted using the contact form can be logged in and accessed. Login page is [https://personal-portfolio-page.herokuapp.com/login.html](https://personal-portfolio-page.herokuapp.com/login.html). The credentials for the registered user are email: puranik@digdeeper.in, password: test123. Upon login you will be redirected to the messages page with list of submitted messages.
