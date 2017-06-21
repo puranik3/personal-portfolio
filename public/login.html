@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="external/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="external/bootstrap-3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Login</h1>
+            <hr/>
+            <form class="form-horizontal" id="frm-login">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="email">Email id</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" name="email" id="email" placeholder="john.doe@example.com" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="password">Password</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="password" name="password" id="password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-3">
+                        <input class="btn btn-default" type="reset" value="Cancel" id="btn-frm-reset" />
+                        <input class="btn btn-primary" type="submit" value="Login" id="btn-frm-submit" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="external/jquery-3.2.1.min.js"></script>
+        <script src="external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/auth.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

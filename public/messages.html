@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Messages received</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="external/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="external/bootstrap-3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+        
+        <link href="css/messages.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                Messages
+                <div id="page-actions">
+                    <div id="logged-in-user-email"></div>
+                    <input class="btn btn-sm btn-primary" id="btn-logout" type="button" value="Sign out" />
+                </div>
+            </h1>
+            <hr/>
+            <table class="table table-striped table-bordered" id="tbl-messages">
+                <thead>
+                    <tr>
+                        <th>Recevied</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="external/jquery-3.2.1.min.js"></script>
+        <script src="external/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/auth.js"></script>
+        <script src="js/messages.js"></script>
+        <script src="js/logout.js"></script>
+    </body>
+</html>

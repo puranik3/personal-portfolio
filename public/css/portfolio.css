@@ -1,0 +1,18 @@
+body {
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: 'Crimson Text', Times, serif;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+#tweets-container {
+    overflow: auto;
+    height: 400px;
+}
+
+#message-delivery-success, #message-delivery-failure {
+    display: none;
+}

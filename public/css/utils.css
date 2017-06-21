@@ -1,0 +1,50 @@
+/*
+    Bootstrap overrides
+    ===================
+*/
+hr { border-top-color: #444; }
+
+a.no-underline-on-hover:hover { text-decoration: none; }
+
+/*
+    Utility classes
+    ===============
+*/
+.text-color-normal  { color: black !important; }
+.text-color-inverse { color: white !important; }
+
+.bg-dark { background-color: black; }
+
+.margin-none                { margin: 0;      }
+.margin-x-small             { margin: 8px 0;  }
+.margin-small               { margin: 12px 0; }
+.margin-base                { margin: 16px 0; }
+.margin-large               { margin: 21px 0; }
+.margin-x-large             { margin: 28px 0; }
+.margin-xx-large            { margin: 40px 0; }
+
+.margin-top-none            { margin-top: 0;    }
+.margin-top-x-small         { margin-top: 8px;  }
+.margin-top-small           { margin-top: 12px; }
+.margin-top-base            { margin-top: 16px; }
+.margin-top-large           { margin-top: 21px; }
+.margin-top-x-large         { margin-top: 28px; }
+.margin-top-xx-large        { margin-top: 40px; }
+
+.margin-bottom-none         { margin-bottom: 0;    }
+.margin-bottom-x-small      { margin-bottom: 8px;  }
+.margin-bottom-small        { margin-bottom: 12px; }
+.margin-bottom-base         { margin-bottom: 16px; }
+.margin-bottom-large        { margin-bottom: 21px; }
+.margin-bottom-x-large      { margin-bottom: 28px; }
+.margin-bottom-xx-large     { margin-bottom: 40px; }
+
+.padding-xx-large           { padding: 40px 0; }
+
+.form-group > label.required-field:after {
+    position: relative;
+    left: 20px;
+    content: '*';
+    margin-left: -12px;
+    color: red;
+}

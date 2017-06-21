@@ -1,0 +1,20 @@
+#page-actions {
+    float: right;
+    text-align: right;
+}
+
+#logged-in-user-email {
+    font-size: 0.4em;
+}
+
+.message-received {
+    width: 160px;
+}
+
+.message-received-date {
+    color: #337ab7;
+}
+
+.message-received-time {
+    color: #888;
+}
