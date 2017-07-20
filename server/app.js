@@ -88,7 +88,7 @@ app.post('/login', function (req, res) {
 app.get('/messages', function (req, res) {
     Message.find(
         function (err, results) {
-            if (err) { return err; }
+            if (err) { return res.status(500).json(err); }
 
             res.json(results);
         }
@@ -110,6 +110,57 @@ app.post('/messages', function (req, res) {
         if (err) { return err; }
         res.status(200).json(message);
     });
+});
+
+app.put('/messages', function (req, res) {
+    let body = req.body;
+    let _id = body._id;
+
+    if (!_id) {
+        return res.status(400).json({
+            message: "_id not specified"
+        });
+    }
+
+    Message.findById(
+        _id,
+        function (err, curMessage) {
+            if (err) { return res.status(500).json(err); }
+
+            curMessage.received = new Date;
+            curMessage.name = body.name || curMessage.name;
+            curMessage.email = body.email || curMessage.email;
+            curMessage.phone = body.phone || curMessage.phone;
+            curMessage.message = body.message || curMessage.message;
+
+            curMessage.save(function (err, savedMessage) {
+                if (err) { return res.status(500).json(err); }
+                
+                res.status(200).json(savedMessage);
+            });
+        }
+    );
+});
+
+app.delete('/messages', function (req, res) {
+    let _id = req.body._id;
+
+    if (!_id) {
+        return res.status(400).json({
+            message: "_id not specified"
+        });
+    }
+
+    Message.findByIdAndRemove(
+        _id,
+        function (err, todo) {  
+            var response = {
+                message: "Message successfully deleted",
+                id: _id
+            };
+            res.status(200).json(response);
+        }
+    );
 });
 
 app.post('/reply', function (req, res) {
