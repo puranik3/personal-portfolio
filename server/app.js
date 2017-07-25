@@ -1,4 +1,5 @@
 let express = require('express');
+let cors = require('cors')
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 
@@ -11,6 +12,11 @@ let User = require( './models/User' );
 let Message = require( './models/Message' );
 
 let app = express();
+
+app.use(cors({
+    credentials: true,
+    origin: true
+}));
 
 app.set('mongodb_uri', (process.env.MONGODB_URI || 'mongodb://localhost/personal-portfolio'));
 app.set('port', (process.env.PORT || 3000));
