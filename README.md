@@ -23,7 +23,7 @@ The app is hosted on Heroku. The following links help access it.
 1. The portfolio page can be accessed at [https://personal-portfolio-page.herokuapp.com/portfolio.html](https://personal-portfolio-page.herokuapp.com/portfolio.html)
 2. The messages submitted using the contact form can be logged in and accessed. Login page is [https://personal-portfolio-page.herokuapp.com/login.html](https://personal-portfolio-page.herokuapp.com/login.html). The credentials for the registered user are email: puranik@digdeeper.in, password: test123. Upon login you will be redirected to the messages page with list of submitted messages.
 
-## Using this project to learn Bootstrap and JavaScript
+## Using this project to learn Bootstrap, JavaScript and jQuery
 1. First, build the [portfolio page](https://personal-portfolio-page.herokuapp.com/portfolio.html) using [Bootstrap](https://getbootstrap.com/docs/3.3/). We recommend Bootstrap v3.3.7 as stable version of Bootstrap 4.x is not yet released. While building the portfolio page, try to come up with a page that resembles the sample portfolio page as closely as possible. However it is your portfolio that is being created - make sure to use your details, photos, Twitter feed etc.
 
 2. Next, build the contact form submission functionality __using jQuery__. This involves 2 main tasks.
@@ -123,7 +123,6 @@ On success, the server response looks like this. It is an array of objects with 
 ```
 
 On failure an appropriate Bootstrap-styled alert component with appropriate message is to be shown. Use .alert-danger to display an error message (say, 'Unable to retrieve list of messages').
-```
 
 ## Help
 These videos on YouTube will guide you on how to go about creating the portfolio page and making the contact form functional. However use these only as a guide and not a tutorial. When stuck, try to get help from these - else avoid watching them.
